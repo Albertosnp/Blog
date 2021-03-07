@@ -1,0 +1,251 @@
+/*Los elementos se identifican por el id que tienen en el html */
+
+/* FUENTES: IMPORTAR */
+@font-face{
+    font-family: "oswald" ; /* psts poner nombre q quieras a la fuente*/
+    src: url(../fonts/Oswald-Variable.ttf) format('truetype') ; 
+    font-weight: normal;
+    font-style: normal;
+    
+}
+/* AJUSTES GENERALES */
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif, Helvetica , Arial;
+    text-decoration: none;
+}
+/* LIMPIA LOS FLOTADOS: IMPIDE QUE los ELEMENTOs de ABAJO SUBAN */
+.clearfix{
+    clear: both;
+    float: none;
+}
+
+body{
+    background: url(../img/email-pattern.png)  #F4F4F4;
+    display:  flex;
+    flex-wrap: wrap;
+}
+
+/* CABECERA */
+#header{ 
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    background-color: grey;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+
+/* AJUSTES DEL LOGO  */
+#logo{
+    margin-right: 150px;
+}
+/* AJUSTES DEL LOGO: (ENLACE)-(SOMBRAS)  */
+#logo a{ 
+    font-family: "oswald", Helvetica;
+    letter-spacing: 2px;
+    color: white;
+    text-shadow: 0px 0px 0px black, 1px 1px 0px black, 2px 2px 0px black;
+    transition: all 500ms;
+    
+}
+/* AJUSTES DEL LOGO: AL PASAR EL RATON POR ENCIMA  */
+#logo a:hover{
+    cursor: pointer;
+    text-shadow: 0px 0px 0px black, -1px -1px 0px black, -2px -2px 0px black;
+}
+
+/* AJUSTES DEL MENU */
+#nav{
+    text-align: center;
+    background: transparent;
+    overflow: hidden; /*Para que todo lo que quede fuera del menu, no se visualice (detalles-picos)*/
+}
+
+#nav ul  {
+    list-style: none;
+    width: auto;
+    display: inline-block;
+    
+}
+
+#nav ul li {
+    float: left;
+    align-items: center;
+
+    
+}
+#nav ul li a{
+    letter-spacing: 1px;
+    font-family: "oswald", Helvetica;
+    font-size: 15px;
+    color: whitesmoke;
+    padding: 10px;
+    text-decoration: none;  
+}
+#nav ul li a:hover{
+    color: rgb(133, 3, 3);
+}
+
+
+/* CONTENIDO */
+#container{ 
+    width: 85%;
+    height: auto;
+    margin: 0px auto;
+    margin-top: 120px;
+    margin-bottom: 30px;
+}
+
+/* BARRA LATERAL */
+#sidebar{
+    float: right;
+    width: auto;
+    height: auto; 
+
+}
+.block-aside{
+    display: block; 
+    width: 90%;
+    margin-top: 0px auto;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0px 0px 1px rgba(167, 166, 166),0px 3px 7px rgba(167, 166, 166),0px 0px 1px #ffff inset,0px -3px 2px rgba(167, 166, 166) inset;
+    border-radius: 5px; 
+ 
+}
+.block-aside h4{
+    font-family: "oswald";
+    margin-bottom: 15px;
+    font-size: 25px ;
+}
+label,
+input[type='text'],
+input[type='email'],
+input[type='password']{
+    display: block;
+    width: 95%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+input[type='text'],
+input[type='email'],
+input[type='password']{
+    padding: 5px;
+    margin-bottom: 10px;
+ 
+}
+
+input[type='button'],
+input[type='submit'],
+.button{
+    margin-top: 7px;
+    margin-bottom: 7px;
+    display: block;
+    border-radius: 2px;
+    padding: 7px;
+    color: black;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    margin: 0px;  
+    
+}    
+.button{ 
+    width: 130px;
+    text-align: center;
+    font-size: 13px ;
+    margin: 3px;
+}
+
+/* PRINCIPAL */
+#main{
+    float: left;
+    width: 70%;
+    height: auto;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #ccc;
+    margin-left: 20px;
+    margin-right: 5px;
+    overflow: hidden;
+    padding: 20px;
+}
+#main h1{
+    font-size: 45px ;
+    color: #444;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px #ccc;
+    font-family: 'oswald';
+}
+#main p{
+    margin-top: 8px ;
+}
+#main h3{
+    font-size: 30px ;
+    color: #2979CD;
+    letter-spacing: 1px;
+    font-family: "oswald";
+    margin-top: 25px;
+    text-shadow: 1px 1px 2px #ccc;
+}
+#main a{
+    color: #333;
+}
+#allEntry a{
+    display: block;
+    border-radius: 2px;
+    padding: 10px;
+    color: black;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    width: 160px;
+    margin: 0px auto;
+    margin-top: 45px;
+}
+.date{
+    color: #999;
+    margin-top: 3px;
+    font-size: 14px;
+}
+/* PIE DE PAGINA */
+#footer{
+    clear: both;
+    align-self: flex-end;
+    width: 100%;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    background: linear-gradient(to bottom, #f9f9f9 0px, #e9e9e9 100%);
+    border: 1px solid #c9c9c9;
+    border-bottom: none;
+    color: #666;
+    height:100px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ALERTAS */
+.alert{
+    padding: 5px;
+    font-size: 14px;
+    color: white;
+    background-color: green;
+    box-shadow: 0px 1px 3px #ccc;
+    margin-bottom: 15px;
+    border-radius: 3px ;
+    width: auto;
+}
+.alert-err{
+    background-color: red;
+}
